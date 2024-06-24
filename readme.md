@@ -53,4 +53,4 @@
 - Embeddings
   - An **embedding** is a list of numbers between -1 and 1 that represent a score of how much a piece of text is talking about some particular quality.
   - These **embeddings** only rate **2 qualities**, but production-level embeddings often have **700-1500+ dimensions** or qualities that they score on
-  - ![embeddings-example]()
+  - ![embeddings-example](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Embeddings%20Example.png)
