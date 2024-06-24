@@ -1,8 +1,13 @@
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
+from langchain.embeddings import OpenAIEmbeddings
 from dotenv import load_dotenv
 
 load_dotenv()
+
+embeddings = OpenAIEmbeddings()
+
+emb = embeddings.embed_query()
 
 text_splitter = CharacterTextSplitter(
     separator="\n",

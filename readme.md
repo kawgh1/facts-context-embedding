@@ -77,8 +77,24 @@
 
 - ### LangChain Class CharacterTextSplitter
   - used to take strings and split them --> also called **chunking**
+  - Multiple variations of Text Splitters:
+    - **SentenceTransformer**
+      - _all-mpnet-base-v2_
+        - runs on local machine, free, but takes local compute power
+        - 768 dimensions
+      - _OpenAI Embeddings_
+        - runs on the OpenAI API, not free, but much faster
+        - 1536 dimensions
+      - etc.
+      - etc.
+    - **Note**: Different algorithms are not really comparable or compatible because how they vectorize and determine their embedding scores is totally different, even if they have the same number of dimensions.
 
 ```
+from langchain.text_splitter import CharacterTextSplitter
+...
+...
+...
+
 text_splitter = CharacterTextSplitter(
     separator="\n",
     chunk_size=200,
@@ -97,7 +113,6 @@ for doc in docs:
 ```
 
 - **Output**:
--
 
 ```
 1. "Dreamt" is the only English word that ends with the letters "mt."
