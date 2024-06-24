@@ -6,4 +6,4 @@
 
 - In this project we will explore using an existing document -- it could be a .txt file, a PDF, a CSV file, a financial report, anything -- and enabling ChatGPT to draw data from this file to return information about the file to the user.
 - This example is a short 10 lines of random facts in a .txt file, but the same principle would apply to any business report or book in a PDF form.
-- ![Overview]()
+- ![Overview](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Context%20with%20Embedding%20Techniques.png)
