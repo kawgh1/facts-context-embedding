@@ -82,9 +82,9 @@
       - _all-mpnet-base-v2_
         - runs on local machine, free, but takes local compute power
         - 768 dimensions
-      - _OpenAI Embeddings_
-        - runs on the OpenAI API, not free, but much faster
-        - 1536 dimensions
+    - **OpenAI Embeddings**
+      - runs on the OpenAI API, not free, but much faster
+      - 1536 dimensions
       - etc.
       - etc.
     - **Note**: Different algorithms are not really comparable or compatible because how they vectorize and determine their embedding scores is totally different, even if they have the same number of dimensions.
