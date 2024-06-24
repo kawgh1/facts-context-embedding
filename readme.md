@@ -91,9 +91,16 @@
 
 ```
 from langchain.text_splitter import CharacterTextSplitter
+from langchain.embeddings import OpenAIEmbeddings
+
 ...
 ...
 ...
+
+
+embeddings = OpenAIEmbeddings()
+
+emb = embeddings.embed_query()
 
 text_splitter = CharacterTextSplitter(
     separator="\n",
