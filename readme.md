@@ -60,4 +60,5 @@
   - We take those lists of numbers and turn them into multi-dimensional **vectors**.
     - We can then make comparisons between those vectors to estimate how similar or dissimilar two sentences are.
       <br>
+      <br>
   - ![squared-L2-and-cosine-similarity](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Cosine%20Sim%20and%20L2.png)
