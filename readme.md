@@ -57,8 +57,19 @@
   - ![embeddings-example](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Embeddings%20Example.png)
 
 - ### Squared L2 and Cosine Similarity
+
   - We take those lists of numbers and turn them into multi-dimensional **vectors**.
     - We can then make comparisons between those vectors to estimate how similar or dissimilar two sentences are.
       <br>
       <br>
   - ![squared-L2-and-cosine-similarity](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Cosine%20Sim%20and%20L2.png)
+
+- ### Vector Stores
+  - We create embeddings for all 10 "facts" in our `facts.txt` file and store them as **vectors** in our **vector store**.
+  - Then, when the user asks a question, we vectorize their question and compare it to the vectors in our **vector store** and grab the most similar (vectorized) facts.
+    <br>
+    <br>
+  - ![vector-store-1](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Vector%20Store%201.png)
+    <br>
+    <br>
+  - ![vector-store-2](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Vector%20Store%202.png)
