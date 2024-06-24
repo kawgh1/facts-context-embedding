@@ -11,12 +11,12 @@
 ### LangChain File Loader Classes
 
 - LangChain provides Classes to help load data from different types of files. These Classes are called 'Loaders'.
-- ![Loaders]()
+- ![Loaders](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/LangChain%20File%20Loader%20Classes.png)
 
 - Additionally, LangChain also has Classes called 'Loaders' that are designed for specific Cloud Storage options like AWS S3 or Azure Blob, etc.
 - These Cloud Loader classes like `S3FileLoader` for AWS can read many kinds of files, not just one. So this is important to remember.
-  ![CloudLoaders]()
+  ![CloudLoaders](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Cloud%20Storage%20Loaders.png)
 
 - Additionally, some `LangChain` Loader Classes, such as the `PyPDFLoader` require additional packages to be installed for them to work correctly (i.e., to read the files correctly)
 
-![additional-packages-required]()
+![additional-packages-required](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/some%20loader%20classes%20require%20additional%20packages.png)
