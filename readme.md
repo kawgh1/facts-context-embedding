@@ -56,7 +56,7 @@
   - These **embeddings** only rate **2 qualities**, but production-level embeddings often have **700-1500+ dimensions** or qualities that they score on
   - ![embeddings-example](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Embeddings%20Example.png)
 
-- Squared L2 and Cosine Similarity
+- ### Squared L2 and Cosine Similarity
   - We take those lists of numbers and turn them into multi-dimensional **vectors**.
     - We can then make comparisons between those vectors to estimate how similar or dissimilar two sentences are.
       <br>
