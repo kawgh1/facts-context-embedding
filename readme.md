@@ -65,6 +65,7 @@
   - ![squared-L2-and-cosine-similarity](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Cosine%20Sim%20and%20L2.png)
 
 - ### Vector Stores
+
   - We create embeddings for all 10 "facts" in our `facts.txt` file and store them as **vectors** in our **vector store**.
   - Then, when the user asks a question, we vectorize their question and compare it to the vectors in our **vector store** and grab the most similar (vectorized) facts.
     <br>
@@ -73,3 +74,80 @@
     <br>
     <br>
   - ![vector-store-2](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Vector%20Store%202.png)
+
+- ### LangChain Class CharacterTextSplitter
+  - used to take strings and split them --> also called **chunking**
+
+```
+text_splitter = CharacterTextSplitter(
+    separator="\n",
+    chunk_size=200,
+    chunk_overlap=0
+)
+
+loader = TextLoader("facts.txt")
+docs = loader.load_and_split(
+    text_splitter=text_splitter
+)
+
+for doc in docs:
+    print(doc.page_content)
+    print("\n")
+
+```
+
+- **Output**:
+-
+
+```
+1. "Dreamt" is the only English word that ends with the letters "mt."
+2. An ostrich's eye is bigger than its brain.
+3. Honey is the only natural food that is made without destroying any kind of life.
+
+
+4. A snail can sleep for three years.
+5. The longest word in the English language is 'pneumonoultramicroscopicsilicovolcanoconiosis.'
+6. The elephant is the only mammal that can't jump.
+
+
+7. The letter 'Q' is the only letter not appearing in any U.S. state name.
+8. The heart of a shrimp is located in its head.
+9. Australia is the only continent covered by a single country.
+
+
+10. The Great Wall of China is approximately 13,171 miles long.
+11. Bananas are berries, but strawberries aren't.
+12. The Sphinx of Giza has the body of a lion and the head of a human.
+
+
+13. The first computer bug was an actual bug trapped in a computer.
+14. Neil Armstrong was the first man to walk on the moon.
+
+
+15. The Eiffel Tower in Paris leans slightly in the sun due to thermal expansion.
+16. Queen Elizabeth II is the longest-reigning current monarch.
+
+
+17. The Leaning Tower of Pisa took 200 years to construct.
+18. Angel Falls is the highest waterfall in the world, located in Venezuela.
+19. Sword swallowing is a skill that takes 3-10 years to learn.
+
+
+20. Isaac Newton invented the cat flap.
+21. Earth, Texas, is the only place on Earth named 'Earth.'
+22. Thomas Edison, who invented the lightbulb, was afraid of the dark.
+
+
+23. The Pacific Ocean is the largest ocean on Earth, covering more than 60 million square miles.
+24. Zeus was the king of the Greek gods according to ancient Greek myth.
+
+
+25. There are about 7,000 feathers on an eagle.
+26. Marie Curie was the first woman to win a Nobel Prize and remains the only person to have won in two different fields—Physics and Chemistry.
+
+
+27. The Sahara Desert is the largest hot desert in the world.
+28. There are 86,400 seconds in a day.
+29. Earth is the only known planet that supports life.
+
+```
