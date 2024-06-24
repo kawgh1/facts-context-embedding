@@ -26,4 +26,31 @@
 ### LangChain TextLoader Class
 
 - TextLoader is a LangChain class that read `.txt` files
-  ![textloader](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Text%20Loader%20.png)
+  - ![textloader](https://raw.githubusercontent.com/kawgh1/facts-context-embedding/main/images/Text%20Loader%20.png)
+
+### This Project
+
+- So we know we want to use `facts.txt` and allow ChatGpt to read it and provide informational responses to the user about the file.
+
+  - Considerations:
+
+    - Including the entire `facts.txt` file in every user query is expensive, both in compute and money $$.
+    - Takes longer to run.
+    - It also makes it more difficult for the LLM to find relevant facts about the document, if it receives it new every query.
+
+  - Better Option:
+    - Put only the top 1-3 **relevant** facts into the request prompt.
+    - Upside: shorter prompt! Less expensive, faster, more focused.
+    - Downside: need to find the most relevant facts to each prompt before sending the request!
+
+### Introducing Embeddings
+
+- Alternative - Semantic Search
+
+  - Understand the goal of the user's search
+  - implement using **embeddings**
+
+- Embeddings
+  - An **embedding** is a list of numbers between -1 and 1 that represent a score of how much a piece of text is talking about some particular quality.
+  - These **embeddings** only rate **2 qualities**, but production-level embeddings often have **700-1500+ dimensions** or qualities that they score on
+  - ![embeddings-example]()
