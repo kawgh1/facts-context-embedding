@@ -166,8 +166,6 @@ for doc in docs:
     - It is not free! But for our purposes may cost a few cents.
     - ```
 
-      ```
-
       1. when you call Chroma.from_documents() and pass in a list of
          documents, you are telling Chroma thru OpenAI API that you
          want to immediately calculate embeddings for all the documents
@@ -184,6 +182,7 @@ for doc in docs:
       "What is an interesting fact about the English language?",
       k=1 # number of result embedding chunks to return
       )
+      ```
 
     ```
 
