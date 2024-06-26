@@ -149,27 +149,16 @@ for doc in docs:
 15. The Eiffel Tower in Paris leans slightly in the sun due to thermal expansion.
 16. Queen Elizabeth II is the longest-reigning current monarch.
 
-
-17. The Leaning Tower of Pisa took 200 years to construct.
-18. Angel Falls is the highest waterfall in the world, located in Venezuela.
-19. Sword swallowing is a skill that takes 3-10 years to learn.
-
-
-20. Isaac Newton invented the cat flap.
-21. Earth, Texas, is the only place on Earth named 'Earth.'
-22. Thomas Edison, who invented the lightbulb, was afraid of the dark.
-
-
-23. The Pacific Ocean is the largest ocean on Earth, covering more than 60 million square miles.
-24. Zeus was the king of the Greek gods according to ancient Greek myth.
-
-
-25. There are about 7,000 feathers on an eagle.
-26. Marie Curie was the first woman to win a Nobel Prize and remains the only person to have won in two different fields—Physics and Chemistry.
-
-
-27. The Sahara Desert is the largest hot desert in the world.
-28. There are 86,400 seconds in a day.
-29. Earth is the only known planet that supports life.
+...
+...
+...
 
 ```
+
+# ChromaDB for Embeddings
+
+- We can use ChromaDB to generate and manage our embeddings
+  - `pip3 install chromadb`
+  - `from langchain.vectorstores.chroma import Chroma`
+  - LangChain allows us to do this through OpenAI API.
+    - It is not free! But for our purposes may cost a few cents.
