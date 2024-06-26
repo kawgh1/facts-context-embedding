@@ -183,7 +183,3 @@ for doc in docs:
       k=1 # number of result embedding chunks to return
       )
       ```
-
-    ```
-
-    ```
