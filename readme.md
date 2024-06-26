@@ -158,7 +158,37 @@ for doc in docs:
 # ChromaDB for Embeddings
 
 - We can use ChromaDB to generate and manage our embeddings
+
   - `pip3 install chromadb`
   - `from langchain.vectorstores.chroma import Chroma`
   - LangChain allows us to do this through OpenAI API.
+
     - It is not free! But for our purposes may cost a few cents.
+    - ```
+
+      ```
+
+    # 1. when you call Chroma.from_documents() and pass in a list of
+
+    # documents, you are telling Chroma thru OpenAI API that you
+
+    # want to immediately calculate embeddings for all the documents
+
+    # 2. it will then create a SQLite db inside the "emb" directory
+
+    # 3. inconsitent between embedding vs. embeddings parameters
+
+    db = Chroma.from_documents(
+    docs,
+    embedding=embeddings,
+    persist_directory="emb"
+    )
+
+    results = db.similarity_search_with_score(
+    "What is an interesting fact about the English language?",
+    k=1 # number of result embedding chunks to return
+    )
+
+    ```
+
+    ```
