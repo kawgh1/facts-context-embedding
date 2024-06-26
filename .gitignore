@@ -3,7 +3,7 @@
 .env
 
 # Chroma DB files
-/emb
+emb/
 
 
 # Byte-compiled / optimized / DLL files
